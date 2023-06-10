@@ -1,5 +1,6 @@
 @extends('layots.master')
-@section('layouts.content')
+
+@section('layots.content')
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
 
@@ -52,28 +53,28 @@
                             <div class="bar"><span></span></div>
                         </div>
                         <div class="progress2">
-                            <h3>CSS <span>70%</span></h3>
+                            <h3>Team Work <span>90%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                         <div class="progress2">
-                            <h3>JavaScript <span>65%</span></h3>
+                            <h3>Working Under Pressure<span>75%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                         <div class="progress2">
-                            <h3>PHP <span>65%</span></h3>
+                            <h3>Time Managment<span>85%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                         <div class="progress2">
-                            <h3>Laravel <span>90%</span></h3>
+                            <h3>Problem Solving <span>90%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
 
                         <div class="progress2">
-                            <h3>MySQL <span>60%</span></h3>
+                            <h3>Communication <span>90%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                         <div class="progress2">
-                            <h3>Git <span>90%</span></h3>
+                            <h3>Agile Development <span>60%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                     </div>

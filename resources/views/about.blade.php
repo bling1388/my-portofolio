@@ -1,5 +1,5 @@
 @extends('layots.master')
-@section('layouts.content')
+@section('layots.content')
     <section class="about" id="about">
         <h2 class="heading">About <span>me</span> </h2>
 
@@ -9,8 +9,8 @@
         </div>
 
         <div class="about-content">
-            <h3>Backend Developer!</h3>
-            <p>As a backend developer with experience in Laravel, I have a keen eye for detail and a strong understanding of
+            <h3>Web Developer!</h3>
+            <p>As a Web developer with experience in Laravel, I have a keen eye for detail and a strong understanding of
                 the inner workings of web applications. I am proficient in PHP, MySQL, and other server-side technologies.
                 My expertise lies in building scalable and efficient web applications that can handle large amounts of
                 traffic and data. I am skilled in developing RESTful APIs, creating database schemas, and optimizing

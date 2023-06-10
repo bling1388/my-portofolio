@@ -44,7 +44,7 @@
 
     html {
         font-size: 62.5%;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     body {
@@ -365,14 +365,208 @@
         margin: 0 0 1.5rem;
     }
 
-    .skills-box .skills-content{
-        
+    .skills-box .skills-content {
+        position: relative;
+        border: .2rem solid var(--main-color);
+        border-radius: .6rem;
+        padding: .5rem 1.5rem;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .skills-box .skills-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--bg-color);
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .skills-box .skills-content:hover::before {
+        width: 100%;
+    }
+
+    .skills-content .progress {
+        padding: 1rem 0;
+    }
+
+    .skills-content .progress2 h3 {
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .skills-content .progress2 h3 span {
+        color: var(--text-color);
+    }
+
+    .skills-content .progress2 .bar {
+        height: 2.5rem;
+        border-radius: .6rem;
+        border: .2rem solid var(--main-color);
+        padding: .5rem;
+        margin: 1rem 0;
+    }
+
+    .skills-content .progress2 .bar span {
+        display: block;
+        height: 100%;
+        border-radius: .3rem;
+        background: var(--main-color);
+    }
+
+    .skills-column:nth-child(1) .skills-content .progress2:nth-child(1) .bar span {
+        width: 90%;
+    }
+
+    .skills-column:nth-child(1) .skills-content .progress2:nth-child(2) .bar span {
+        width: 70%;
+    }
+
+    .skills-column:nth-child(1) .skills-content .progress2:nth-child(3) .bar span {
+        width: 65%;
+    }
+
+    .skills-column:nth-child(1) .skills-content .progress2:nth-child(4) .bar span {
+        width: 65%;
+    }
+
+    .skills-column:nth-child(1) .skills-content .progress2:nth-child(5) .bar span {
+        width: 90%;
+    }
+
+    .skills-column:nth-child(1) .skills-content .progress2:nth-child(6) .bar span {
+        width: 65%;
+    }
+
+    .skills-column:nth-child(1) .skills-content .progress2:nth-child(7) .bar span {
+        width: 90%;
+    }
+
+    .skills-column:nth-child(2) .skills-content .progress2:nth-child(1) .bar span {
+        width: 70%;
+    }
+
+    .skills-column:nth-child(2) .skills-content .progress2:nth-child(2) .bar span {
+        width: 90%;
+    }
+
+    .skills-column:nth-child(2) .skills-content .progress2:nth-child(3) .bar span {
+        width: 75%;
+    }
+
+    .skills-column:nth-child(2) .skills-content .progress2:nth-child(4) .bar span {
+        width: 85%;
+    }
+
+    .skills-column:nth-child(2) .skills-content .progress2:nth-child(5) .bar span {
+        width: 90%;
+    }
+
+    .skills-column:nth-child(2) .skills-content .progress2:nth-child(6) .bar span {
+        width: 90%;
+    }
+
+    .skills-column:nth-child(2) .skills-content .progress2:nth-child(7) .bar span {
+        width: 60%;
+    }
+
+    .contact {
+        min-height: auto;
+        padding-bottom: 7rem;
+    }
+
+    .contact form {
+        max-width: 70rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact form .input-box {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .contact form .input-box .input-field {
+        position: relative;
+        width: 49%;
+        margin: .8rem 0;
+    }
+
+    .contact form .input-box .input-field input,
+    .contact form .textarea-field textarea {
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        color: var(--text-color);
+        background: transparent;
+        border-radius: .6rem;
+        border: .2rem solid var(--main-color);
+    }
+
+    .contact form .input-box .input-field input::placeholder,
+    .contact form .textarea-field textarea::placeholder {
+        color: var(--text-color);
+    }
+
+    .contact form .focus {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--second-bg-color);
+        border-radius: .6rem;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .contact form .input-box .input-field input:focus~.focus,
+    .contact form .input-box .input-field input:valid.focus,
+    .contact form .textarea-field textarea:focus~.focus,
+    .contact form .textarea-field textarea:valid.focus {
+        width: 100%;
+    }
+
+    .contact form .textarea-field {
+        position: relative;
+        margin: .8rem 0 2.7rem;
+        display: flex;
+    }
+
+    .contact form .textarea-field textarea {
+        resize: none;
+    }
+
+    .contact form .btn-box.btns .btn {
+        cursor: pointer;
+    }
+
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2rem 9%;
+        background: var(--second-bg-color);
+    }
+
+    .footer-text p {
+        font-size: 1.6rem;
     }
 </style>
 
 <body>
     <header class="header">
-        <a href="{{ url('/') }}" class="logo">Besi.</a>
+        <a href="{{ url('/') }}" class="logo">LaraTech.</a>
         {{-- <a href="{{ url('/') }}"> <img src="{{ asset('assets/besi.png') }}" alt="logo" class="logo"
                 width="60px"></a> --}}
 
@@ -382,7 +576,7 @@
             <a href="{{ url('/') }}" class="active">Home</a>
             <a href="{{ url('/about') }}">About</a>
             <a href="{{ url('/skills') }}">Skills</a>
-            <a href="#">Contact</a>
+            <a href="{{ url('/contact') }}">Contact</a>
 
         </nav>
 

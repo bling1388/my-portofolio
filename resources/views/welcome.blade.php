@@ -1,5 +1,6 @@
 @extends('layots.master')
-@section('layouts.content')
+
+@section('layots.content')
     {{-- home section design --}}
 
     <section class="home" id="home">
