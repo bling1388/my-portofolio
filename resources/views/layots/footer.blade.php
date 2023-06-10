@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer-text">
-        <p>&copy; {{ date('Y') }} Besjan Bardhollari | Laratech</p>
+        <p>&copy; {{ date('Y') }} Besjan Bardhollari | CTO and Co-Founder of Laratech</p>
     </div>
 </footer>
 
