@@ -12,6 +12,27 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+
+
+{{-- togle navbar --}}
+<script>
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+        navbar.style.transition = 'left 0.25s ease';
+        if (navbar.classList.contains('active')) {
+            navbar.style.left = '0';
+        } else {
+            navbar.style.left = '-100%';
+        }
+    }
+
+   
+</script>
+
 </body>
 
-</html>
+</html

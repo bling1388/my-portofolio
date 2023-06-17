@@ -562,7 +562,141 @@
     .footer-text p {
         font-size: 1.6rem;
     }
+
+
+    /* BREAKPOINTS */
+    @media (max-width: 1200px) {
+        html {
+            font-size: 55%;
+        }
+
+        #home {
+            display: flex;
+            background: url({{ asset('assets/bust-foto3.png') }}) no-repeat;
+            background-size: 400px;
+            background-position: right;
+        }
+    }
+
+
+
+    @media (max-width: 991px) {
+        .header {
+            padding: 5rem 4%;
+        }
+
+        #home {
+            background-image: url();
+        }
+
+
+        section {
+            padding: 10rem 4% 2rem;
+        }
+
+        .home {
+            padding: 0 4%;
+        }
+
+        .footer {
+            padding: 2rem 4%;
+        }
+
+    }
+
+
+    @media (max-width: 768px) {
+
+        #home {
+            margin-top: 50px;
+        }
+
+        #home {
+            background-image: url();
+        }
+
+        #skills {
+            margin-top: 50px;
+        }
+
+        #about {
+            margin-top: 50px;
+        }
+
+        #contact {
+            margin-top: 50px;
+        }
+
+        .header {
+            background: var(--bg-color);
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        #menu-icon {
+            display: block;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            width: 100%;
+            padding: 1rem 4%;
+            background: var(--main-color);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+            z-index: 1;
+            transition: none;
+            transition-delay: .25s;
+        }
+
+        .navbar .active {
+            left: 0;
+            transition-delay: .0s;
+        }
+
+        .navbar .active-nav {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            border-top: .1rem solid rgba(0, 0, 0, .2);
+            z-index: -1;
+            transition: .25s ease;
+            transition-delay: 0s;
+        }
+
+        .navbar.active .active-nav {
+            left: 0;
+            transition-delay: .22s;
+        }
+
+        .navbar a {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+            transform: translateX(-20rem);
+            transition: .25s ease;
+            transition-delay: 0s;
+        }
+
+        .navbar.active a {
+            transform: translateX(0);
+            transition-delay: .25s;
+        }
+
+    }
 </style>
+
+
+
 
 <body>
     <header class="header">
@@ -573,11 +707,25 @@
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <nav class="navbar">
-            <a href="{{ url('/') }}" class="active">Home</a>
+            <a href="{{ url('/') }}" class="">Home</a>
             <a href="{{ url('/about') }}">About</a>
             <a href="{{ url('/skills') }}">Skills</a>
             <a href="{{ url('/contact') }}">Contact</a>
 
+            <span class="active-nav"></span>
+
         </nav>
 
     </header>
+
+
+    <script>
+        const navLinks = document.querySelectorAll('.navbar a');
+        const currentUrl = window.location.href;
+
+        navLinks.forEach(link => {
+            if (link.href === currentUrl) {
+                link.classList.add('active');
+            }
+        });
+    </script>
