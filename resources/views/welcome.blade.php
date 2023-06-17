@@ -20,7 +20,7 @@
 
             <div class="btn-box">
 
-                <a href="#" class="btn">Hire me</a>
+                <a href="{{ url('/contact') }}" class="btn">Hire me</a>
                 <a href="#" class="btn">Let's Talk</a>
             </div>
         </div>
