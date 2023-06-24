@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/skills', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::post('/form/store', [FormController::class, 'form_store'])->name('form.store');

@@ -21,7 +21,8 @@
             <div class="btn-box">
 
                 <a href="{{ url('/contact') }}" class="btn">Hire me</a>
-                <a href="#" class="btn">Let's Talk</a>
+                <a href="{{ asset('cv/Besjan_Bardhollari_-_Web_Developer.pdf') }}" class="btn" download="">Download
+                    CV</a>
             </div>
         </div>
         {{-- <div>

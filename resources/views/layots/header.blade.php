@@ -73,6 +73,12 @@
         font-size: 2.5rem;
         color: var(--text-color);
         font-weight: 600;
+
+    }
+
+    header .logo {
+        text-decoration: none;
+
     }
 
     .navbar a {
@@ -81,6 +87,7 @@
         font-weight: 500;
         margin-left: 3.5rem;
         transition: .3s;
+        text-decoration: none;
 
     }
 
@@ -627,6 +634,15 @@
             margin-top: 50px;
         }
 
+        #contact .input-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact .input-box .input-field {
+            width: 100%;
+        }
+
         .header {
             background: var(--bg-color);
         }
@@ -699,6 +715,35 @@
 
 
 <body>
+    @if (\Session::has('success'))
+        <script>
+            Swal.fire(
+                '',
+                '{{ \Session::get('success') }}',
+                'success'
+            )
+        </script>
+    @endif
+
+    @if (\Session::has('info'))
+        <script>
+            Swal.fire(
+                '',
+                '{{ \Session::get('info') }}',
+                'info'
+            )
+        </script>
+    @endif
+
+    @if (\Session::has('error'))
+        <script>
+            Swal.fire(
+                'Gabim!',
+                '{{ \Session::get('error') }}',
+                'info'
+            )
+        </script>
+    @endif
     <header class="header">
         <a href="{{ url('/') }}" class="logo">LaraTech.</a>
         {{-- <a href="{{ url('/') }}"> <img src="{{ asset('assets/besi.png') }}" alt="logo" class="logo"
