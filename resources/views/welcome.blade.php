@@ -17,13 +17,21 @@
                 time. I am always looking for ways to improve my skills and stay up-to-date with the latest trends and
                 technologies in the industry.
             </p>
+            <div class="d-flex align-items-center">
+                <div class="btn-box">
 
-            <div class="btn-box">
+                    <a href="{{ url('/contact') }}" class="btn">Hire me</a>
+                    <a href="{{ asset('cv/Besjan_Bardhollari_-_Web_Developer.pdf') }}" class="btn" download="">Download
+                        CV</a>
 
-                <a href="{{ url('/contact') }}" class="btn">Hire me</a>
-                <a href="{{ asset('cv/Besjan_Bardhollari_-_Web_Developer.pdf') }}" class="btn" download="">Download
-                    CV</a>
+                </div>
+                <div class="ml-5">
+                    <a href="https://www.buymeacoffee.com/besjan1388V" target="_blank" class="btn ml-2"><img
+                            src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee"
+                            style="height: 50px !important;width: 217px !important; "></a>
+                </div>
             </div>
+
         </div>
         {{-- <div>
             <img src="{{ asset('assets/bust-foto1.png') }}" alt="" style="display:flex; justify-content: end;">
